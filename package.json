@@ -29,7 +29,7 @@
     "build-cjs:min": "esbuild src/*.ts --format=cjs --minify --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --out-extension:.js=.min.cjs --sourcemap",
     "build-esm": "esbuild src/*.ts --format=esm --metafile=dist/meta.json --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --sourcemap && tsc --emitDeclarationOnly --project tsconfig.build.json --outDir dist",
     "build-esm:min": "esbuild ./src/*.ts --format=esm --keep-names --bundle --tsconfig=tsconfig.build.json --minify --out-extension:.js=.min.js --outdir=./dist --sourcemap",
-    "build-example": "mkdir -p ./public && rm -rf ./public/* && VITE_DEBUG_MODE=staging vite --mode staging --base=\"/repo-name\" build",
+    "build-example": "mkdir -p ./public && rm -rf ./public/* && vite --mode staging --base=\"/htm\" build",
     "build-docs": "typedoc ./src/index.ts",
     "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-cjs && npm run build-esm && npm run build-esm:min && npm run build-cjs:min",
     "start": "vite",
@@ -39,7 +39,9 @@
     "postversion": "git push --follow-tags && npm publish",
     "prepublishOnly": "npm run build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@preact/signals": "^2.5.1"
+  },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.2",
     "@substrate-system/debug": "^0.9.24",
@@ -48,12 +50,13 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "auto-changelog": "^2.4.0",
+    "browserslist": "^4.28.1",
     "esbuild": "^0.27.0",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
     "htm": "^3.1.1",
+    "lightningcss": "^1.30.2",
     "markdown-toc": "^1.2.0",
-    "postcss-nesting": "^13.0.2",
     "preact": "^10.27.0",
     "tap-spec": "^5.0.0",
     "typedoc": "^0.28.9",
