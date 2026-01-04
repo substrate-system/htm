@@ -14,7 +14,22 @@ UI components made with [`htm`](https://github.com/developit/htm).
 [See a live demo](https://substrate-system.github.io/htm/)
 
 <details><summary><h2>Contents</h2></summary>
+
 <!-- toc -->
+
+- [Install](#install)
+- [Example](#example)
+  * [Button](#button)
+  * [JS](#js)
+- [Modules](#modules)
+  * [ESM](#esm)
+  * [Common JS](#common-js)
+- [CSS](#css)
+  * [Import CSS](#import-css)
+  * [pre-built JS](#pre-built-js)
+
+<!-- tocstop -->
+
 </details>
 
 ## Install
