@@ -1,17 +1,17 @@
 # htm
-[![tests](https://img.shields.io/github/actions/workflow/status/nichoth/htm/nodejs.yml?style=flat-square)](https://github.com/nichoth/htm/actions/workflows/nodejs.yml)
-[![types](https://img.shields.io/npm/types/@nichoth/htm?style=flat-square)](README.md)
+[![tests](https://img.shields.io/github/actions/workflow/status/substrate-system/htm/nodejs.yml?style=flat-square)](https://github.com/substrate-system/htm/actions/workflows/nodejs.yml)
+[![types](https://img.shields.io/npm/types/@substrate-system/htm?style=flat-square)](README.md)
 [![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
 [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
-[![Common Changelog](https://nichoth.github.io/badge/common-changelog.svg)](./CHANGELOG.md)
-[![install size](https://flat.badgen.net/packagephobia/install/@nichoth/htm)](https://packagephobia.com/result?p=@nichoth/htm)
-[![gzip size](https://flat.badgen.net/bundlephobia/minzip/@nichoth/htm)](https://bundlephobia.com/package/@nichoth/htm)
+[![Common Changelog](https://substrate-system.github.io/badge/common-changelog.svg)](./CHANGELOG.md)
+[![install size](https://flat.badgen.net/packagephobia/install/@substrate-system/htm)](https://packagephobia.com/result?p=@substrate-system/htm)
+[![gzip size](https://flat.badgen.net/bundlephobia/minzip/@substrate-system/htm)](https://bundlephobia.com/package/@substrate-system/htm)
 [![license](https://img.shields.io/badge/license-Big_Time-blue?style=flat-square)](LICENSE)
 
 
-Components made with [`htm`](https://github.com/developit/htm).
+UI components made with [`htm`](https://github.com/developit/htm).
 
-[See a live demo](https://nichoth.github.io/package-name/)
+[See a live demo](https://substrate-system.github.io/htm/)
 
 <details><summary><h2>Contents</h2></summary>
 <!-- toc -->
@@ -19,19 +19,18 @@ Components made with [`htm`](https://github.com/developit/htm).
 
 ## Install
 
-Installation instructions
-
 ```sh
-npm i -S @namespace/package
+npm i -S @substrate-system/htm
 ```
 
 ## Example
 
-`usage instructions here`
+### Button
 
 ### JS
 ```js
-import '@namespace/package/module'
+import { button } from '@substrate-system/htm/button'
+import '@substrate-system/htm/css/button'
 ```
 
 
@@ -41,12 +40,12 @@ This exposes ESM and common JS via [package.json `exports` field](https://nodejs
 
 ### ESM
 ```js
-import '@namespace/package/module'
+import * as components from '@susbtrate-system/htm'
 ```
 
 ### Common JS
 ```js
-require('@namespace/package/module')
+require('@susbtrate-system/htm')
 ```
 
 ## CSS
@@ -54,20 +53,10 @@ require('@namespace/package/module')
 ### Import CSS
 
 ```js
-import '@namespace/package-name/css'
-```
+import '@susbtrate-system/htm/css'
 
-Or minified:
-```js
-import '@namespace/package-name/css/min'
-```
-
-### Customize CSS via some variables
-
-```css
-component-name {
-    --example: pink;
-}
+// or modules
+import '@susbtrate-system/htm/css/button'
 ```
 
 ### pre-built JS
@@ -76,10 +65,10 @@ accessible to your web server, then link to them in HTML.
 
 #### copy
 ```sh
-cp ./node_modules/@namespace/package/dist/module.min.js ./public
+cp ./node_modules/@substrate-system/htm/dist/index.min.js ./public/htm.min.js
 ```
 
 #### HTML
 ```html
-<script type="module" src="./module.min.js"></script>
+<script type="module" src="./htm.min.js"></script>
 ```
