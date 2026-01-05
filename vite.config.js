@@ -1,7 +1,9 @@
+// @ts-check
 import { defineConfig } from 'vite'
 import preact from '@preact/preset-vite'
 import browserslist from 'browserslist'
 import { browserslistToTargets } from 'lightningcss'
+import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,13 +11,16 @@ export default defineConfig({
         global: 'globalThis'
     },
     root: 'example',
+    resolve: {
+        alias: {
+            // Allow testing package imports locally
+            '@substrate-system/htm': resolve(__dirname, 'dist')
+        }
+    },
     plugins: [
         preact({
             devtoolsInProd: false,
             prefreshEnabled: true,
-            babel: {
-                sourceMaps: 'both'
-            }
         })
     ],
     // https://github.com/vitejs/vite/issues/8644#issuecomment-1159308803

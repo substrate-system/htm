@@ -21,7 +21,12 @@
     "noImplicitAny": false,
     "declaration": true,
     "declarationDir": "dist",
-    "declarationMap": true
+    "declarationMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@substrate-system/htm": ["./dist/index.js"],
+      "@substrate-system/htm/*": ["./dist/*"]
+    }
   },
   "include": [
     "example",
