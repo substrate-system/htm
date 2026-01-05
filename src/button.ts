@@ -1,7 +1,6 @@
 import { html } from 'htm/preact'
 import { type FunctionComponent } from 'preact'
 import { type Signal, useSignal } from '@preact/signals'
-import './button.css'
 
 interface ButtonProps {
     onClick?:(ev:MouseEvent)=>void|Promise<void>;

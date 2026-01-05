@@ -4,6 +4,7 @@ import { useCallback } from 'preact/hooks'
 import Debug from '@substrate-system/debug'
 import { useSignal } from '@preact/signals'
 import { Button } from '../src/button.js'
+import '../src/button.css'
 const debug = Debug('htm:example')
 
 if (import.meta.env.DEV) {
